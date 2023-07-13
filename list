@@ -1,0 +1,20 @@
+#include <iostream>
+#include<list>
+using namespace std;
+int main() {
+list<int>l;
+
+  //entry of the element
+  l.push_back(15);
+  l.push_back(56);
+  l.push_back(336);
+
+  // accesing the element of list
+  for(int i:l){
+    cout<<i<<" ";
+  }
+  
+  cout<<endl<<"size of the list --> "<<l.size();
+
+  
+}
