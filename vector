@@ -1,0 +1,60 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+//note: 
+  //vector may be defined as
+  /*vector<int>a(5,1);
+  here 5 is size of vector and 1 is present at all indexes.*/
+
+  
+  //vector can be copied to other vector as
+  /*vector<int>b(a)
+here all the elements of the vector a is being copied to vector b*/
+  
+  
+  vector<int> v;
+  cout << "capacity -> " << v.capacity() << endl;
+
+  // element entry
+  v.push_back(4);
+  cout << "capacity -> " << v.capacity() << endl;
+
+  v.push_back(56);
+  cout << "capacity -> " << v.capacity() << endl;
+
+  v.push_back(46);
+  cout << "capacity -> " << v.capacity() << endl;
+
+  v.push_back(40);
+  cout << "capacity -> " << v.capacity() << endl;
+  cout << "size -> " << v.size() << endl;
+
+  // element at any index 3
+
+  cout << "element at third index ->  " << v.at(3) << endl;
+
+  // element at front and back of the array
+  cout << "element at the front ->  " << v.front() << endl;
+  cout << "element at the back ->  " << v.back() << endl;
+
+  // accessing of the value of element
+  for (int i : v) {
+    cout << i << " ";
+  }
+  cout<<endl;
+  // element deletion from back using pop
+  v.pop_back();
+  cout << "after the poping of the element" << endl;
+  for (int j : v) {
+    cout << j << " ";
+  }
+cout<<endl;
+  // clearing of the vector means that size of the vector becomes zero, but
+  // capacity is not reduced
+  cout << "before clear , size-> " << v.size() << endl;
+  v.clear();
+  cout << "before clear , size-> " << v.size() << endl;
+
+  return 0;
+}
